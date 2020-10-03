@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DB2DDDABC596A8AD4905E53 /* Pods_KoreaNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF1144F0D14ADD85E56728 /* Pods_KoreaNow.framework */; };
+		D3C9845A25285E450003483D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9845925285E450003483D /* AppDelegate.swift */; };
+		D3C9846325285E460003483D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C9846225285E460003483D /* Assets.xcassets */; };
+		D3C9846625285E460003483D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C9846425285E460003483D /* LaunchScreen.storyboard */; };
+		D3C9846E25285E8A0003483D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9846D25285E8A0003483D /* MainVC.swift */; };
+		D3C9847025285EA00003483D /* BoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9846F25285EA00003483D /* BoardCell.swift */; };
+		D3C9847225285EBC0003483D /* BoardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847125285EBC0003483D /* BoardDetailVC.swift */; };
+		D3C9847425285EC70003483D /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847325285EC70003483D /* CommentCell.swift */; };
+		D3C9847625285ED60003483D /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847525285ED60003483D /* CommentVC.swift */; };
+		D3C9847825285EE80003483D /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847725285EE80003483D /* NewsData.swift */; };
+		D3C9847A25285EF60003483D /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847925285EF60003483D /* NewsService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FFF1144F0D14ADD85E56728 /* Pods_KoreaNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreaNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93943E9CF300138289592C06 /* Pods-KoreaNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaNow.debug.xcconfig"; path = "Target Support Files/Pods-KoreaNow/Pods-KoreaNow.debug.xcconfig"; sourceTree = "<group>"; };
+		9C5A7234EC80FA17F373BFC2 /* Pods-KoreaNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaNow.release.xcconfig"; path = "Target Support Files/Pods-KoreaNow/Pods-KoreaNow.release.xcconfig"; sourceTree = "<group>"; };
+		D3C9845625285E450003483D /* KoreaNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C9845925285E450003483D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3C9846225285E460003483D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3C9846525285E460003483D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3C9846725285E460003483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C9846D25285E8A0003483D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		D3C9846F25285EA00003483D /* BoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCell.swift; sourceTree = "<group>"; };
+		D3C9847125285EBC0003483D /* BoardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDetailVC.swift; sourceTree = "<group>"; };
+		D3C9847325285EC70003483D /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		D3C9847525285ED60003483D /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
+		D3C9847725285EE80003483D /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		D3C9847925285EF60003483D /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3C9845325285E450003483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB2DDDABC596A8AD4905E53 /* Pods_KoreaNow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6194A38C533854510078F828 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93943E9CF300138289592C06 /* Pods-KoreaNow.debug.xcconfig */,
+				9C5A7234EC80FA17F373BFC2 /* Pods-KoreaNow.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3C9844D25285E450003483D = {
+			isa = PBXGroup;
+			children = (
+				D3C9845825285E450003483D /* KoreaNow */,
+				D3C9845725285E450003483D /* Products */,
+				6194A38C533854510078F828 /* Pods */,
+				D745A224D45CA394975BE6C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3C9845725285E450003483D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9845625285E450003483D /* KoreaNow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3C9845825285E450003483D /* KoreaNow */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847F25285F670003483D /* Service */,
+				D3C9847E25285F650003483D /* Model */,
+				D3C9847B25285F560003483D /* VC */,
+				D3C9845925285E450003483D /* AppDelegate.swift */,
+				D3C9846225285E460003483D /* Assets.xcassets */,
+				D3C9846425285E460003483D /* LaunchScreen.storyboard */,
+				D3C9846725285E460003483D /* Info.plist */,
+			);
+			path = KoreaNow;
+			sourceTree = "<group>";
+		};
+		D3C9847B25285F560003483D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9848125285FAF0003483D /* CommentVC */,
+				D3C9847C25285F5A0003483D /* MainVC */,
+				D3C9847D25285F5F0003483D /* BoardDetailVC */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D3C9847C25285F5A0003483D /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9846D25285E8A0003483D /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		D3C9847D25285F5F0003483D /* BoardDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847125285EBC0003483D /* BoardDetailVC.swift */,
+				D3C9848025285F9B0003483D /* TableViewCell */,
+			);
+			path = BoardDetailVC;
+			sourceTree = "<group>";
+		};
+		D3C9847E25285F650003483D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847725285EE80003483D /* NewsData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3C9847F25285F670003483D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847925285EF60003483D /* NewsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D3C9848025285F9B0003483D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9846F25285EA00003483D /* BoardCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D3C9848125285FAF0003483D /* CommentVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847525285ED60003483D /* CommentVC.swift */,
+				D3C9848225285FB40003483D /* CommentCell */,
+			);
+			path = CommentVC;
+			sourceTree = "<group>";
+		};
+		D3C9848225285FB40003483D /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9847325285EC70003483D /* CommentCell.swift */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		D745A224D45CA394975BE6C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FFF1144F0D14ADD85E56728 /* Pods_KoreaNow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3C9845525285E450003483D /* KoreaNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3C9846A25285E460003483D /* Build configuration list for PBXNativeTarget "KoreaNow" */;
+			buildPhases = (
+				12F8C066A4D57C7E41BF431E /* [CP] Check Pods Manifest.lock */,
+				D3C9845225285E450003483D /* Sources */,
+				D3C9845325285E450003483D /* Frameworks */,
+				D3C9845425285E450003483D /* Resources */,
+				6A4194A5B85C8FA27B82B8FF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoreaNow;
+			productName = KoreaNow;
+			productReference = D3C9845625285E450003483D /* KoreaNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3C9844E25285E450003483D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "김동현";
+				TargetAttributes = {
+					D3C9845525285E450003483D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = D3C9845125285E450003483D /* Build configuration list for PBXProject "KoreaNow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3C9844D25285E450003483D;
+			productRefGroup = D3C9845725285E450003483D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3C9845525285E450003483D /* KoreaNow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3C9845425285E450003483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C9846625285E460003483D /* LaunchScreen.storyboard in Resources */,
+				D3C9846325285E460003483D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F8C066A4D57C7E41BF431E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoreaNow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A4194A5B85C8FA27B82B8FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoreaNow/Pods-KoreaNow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoreaNow/Pods-KoreaNow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoreaNow/Pods-KoreaNow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3C9845225285E450003483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C9847825285EE80003483D /* NewsData.swift in Sources */,
+				D3C9847225285EBC0003483D /* BoardDetailVC.swift in Sources */,
+				D3C9847A25285EF60003483D /* NewsService.swift in Sources */,
+				D3C9846E25285E8A0003483D /* MainVC.swift in Sources */,
+				D3C9847025285EA00003483D /* BoardCell.swift in Sources */,
+				D3C9845A25285E450003483D /* AppDelegate.swift in Sources */,
+				D3C9847625285ED60003483D /* CommentVC.swift in Sources */,
+				D3C9847425285EC70003483D /* CommentCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D3C9846425285E460003483D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3C9846525285E460003483D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3C9846825285E460003483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3C9846925285E460003483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3C9846B25285E460003483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93943E9CF300138289592C06 /* Pods-KoreaNow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RA99PDU87Z;
+				INFOPLIST_FILE = KoreaNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.DevDDong.KoreaNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3C9846C25285E460003483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C5A7234EC80FA17F373BFC2 /* Pods-KoreaNow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RA99PDU87Z;
+				INFOPLIST_FILE = KoreaNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.DevDDong.KoreaNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3C9845125285E450003483D /* Build configuration list for PBXProject "KoreaNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C9846825285E460003483D /* Debug */,
+				D3C9846925285E460003483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3C9846A25285E460003483D /* Build configuration list for PBXNativeTarget "KoreaNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C9846B25285E460003483D /* Debug */,
+				D3C9846C25285E460003483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3C9844E25285E450003483D /* Project object */;
+}
