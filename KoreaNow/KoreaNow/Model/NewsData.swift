@@ -31,3 +31,15 @@ struct Board: Codable {
         case seq = "SEQ"
     }
 }
+
+struct User {
+    let name: String
+    let email: String
+}
+
+struct Comment {
+    let name: String
+    let commentText: String
+    let time: String
+}
+    

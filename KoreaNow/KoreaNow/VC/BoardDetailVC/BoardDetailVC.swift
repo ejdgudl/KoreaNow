@@ -12,6 +12,9 @@ import WebKit
 class BoardDetailVC: UIViewController {
     
     // MARK: Properties
+    public var user: User?
+    public var seq: Int?
+    
     public var webURL: URL?
     
     private lazy var webView: WKWebView = {
@@ -33,7 +36,11 @@ class BoardDetailVC: UIViewController {
     // MARK: - @objc
     @objc private func didTapCommentButton() {
         let commentVC = CommentVC()
-        present(UINavigationController(rootViewController: commentVC), animated: true)
+        commentVC.seq = self.seq
+        commentVC.user = self.user
+        let nav = UINavigationController(rootViewController: commentVC)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
     }
     
     // MARK: Configure

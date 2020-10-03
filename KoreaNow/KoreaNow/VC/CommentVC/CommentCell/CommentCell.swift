@@ -11,9 +11,16 @@ import UIKit
 class CommentCell: UITableViewCell {
     
     // MARK: Properties
+    var comment: Comment? {
+        didSet {
+            nickNameLabel.text = comment?.name
+            commentLabel.text = comment?.commentText
+            postDateLabel.text = comment?.time
+        }
+    }
+    
     private let nickNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "nickName"
         label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
@@ -22,14 +29,12 @@ class CommentCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 15, weight: .regular)
-        label.text = "sadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdfsadfsdfsdf"
         return label
     }()
     
     private let postDateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 10, weight: .light)
-        label.text = "시간나올곳"
         return label
     }()
     

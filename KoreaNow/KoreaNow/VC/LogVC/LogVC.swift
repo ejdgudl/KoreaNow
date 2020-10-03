@@ -151,9 +151,17 @@ extension LogVC: ASAuthorizationControllerDelegate {
                             
                             // When already join user
                             print("----- FB DATABASE (this user is already a member)-----")
-                            self.view.hideToastActivity()
                         }
-                        self.dismiss(animated: true, completion: nil)
+                        
+                        FirebaseService.share.getUserData { (user) -> (Void) in
+                            let userInfo: [String: User] = [
+                                "user": user
+                            ]
+                            NotificationCenter.default.post(name: .loginName, object: nil, userInfo: userInfo)
+                            
+                            self.view.hideToastActivity()
+                            self.dismiss(animated: true, completion: nil)
+                        }
                     }
                 }
             }

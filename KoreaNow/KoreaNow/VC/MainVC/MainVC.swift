@@ -13,6 +13,12 @@ import Alamofire
 class MainVC: UIViewController {
     
     // MARK: Properties
+    public var user: User? {
+        didSet {
+            print("----- In MainVC USER From NOTI \(String(describing: user)) -----")
+        }
+    }
+    
     private var boardList: [Board]? {
         didSet {
             tableView.reloadData()
@@ -43,6 +49,13 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchNewsData()
+    }
+    
+    // MARK: - @objc
+    @objc private func loginNotiFunc(noti: Notification) {
+        guard let userInfo = noti.userInfo as? [String: User] else { return }
+        guard let user = userInfo["user"] else { return }
+        self.user = user
     }
     
     // MARK: - Helpers
@@ -77,7 +90,7 @@ class MainVC: UIViewController {
     
     // MARK: - ConfigureNavi
     private func configureNavi() {
-        title = "Korea Timeline Slider"
+        
     }
     
     // MARK: ConfigureViews
@@ -148,6 +161,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
         let boardDetailVC = BoardDetailVC()
         boardDetailVC.webURL = webURL
+        boardDetailVC.seq = seq
+        boardDetailVC.user = self.user
         navigationController?.pushViewController(boardDetailVC, animated: true)
     }
 }

@@ -50,4 +50,46 @@ final class FirebaseService {
             print("----- FB AUTH ( have currentUser ) ----- ")
         }
     }
+    
+    // MARK: - Get User Data
+    public func getUserData( complition: @escaping (User) -> (Void)) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value) { (snapshot) in
+            if let dic = snapshot.value as? Dictionary<String, AnyObject> {
+                guard let name = dic["name"] as? String else { return }
+                guard let email = dic["email"] as? String else { return }
+                let user = User(name: name, email: email)
+                
+                complition(user)
+            }
+        }
+    }
+    
+    // getTimeSort
+    func getTimeSort(seq: Int, complition: @escaping ([String]) -> ()) {
+        Database.database().reference().child("comments").child(String(seq)).observeSingleEvent(of: .value) { (snapshot) in
+            guard let value = snapshot.value as? [String: Any] else { return }
+            let timeArray = value.keys.sorted()
+            complition(timeArray)
+        }
+    }
+    
+    // MARK: - Get Comment
+    public func getComment(seq: Int?, complition: @escaping ([Comment]) -> ()) {
+        guard let seq = seq else { return }
+        
+        self.getTimeSort(seq: seq) { timeArray in
+            var commentArray = [Comment]()
+            timeArray.forEach {
+                Database.database().reference().child("comments").child(String(seq)).child($0).observeSingleEvent(of: .value) { (snapshot) in
+                    guard let nameAndText = snapshot.value as? [String: String] else { return }
+                    guard let name = nameAndText.keys.first else { return }
+                    guard let text = nameAndText.values.first else { return }
+                    commentArray.append(Comment(name: name, commentText: text, time: snapshot.key))
+                    complition(commentArray)
+                }
+            }
+        }
+            
+    }
 }

@@ -24,6 +24,7 @@
 		D3C9848B25287A380003483D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9848A25287A380003483D /* FirebaseService.swift */; };
 		D3C98490252881180003483D /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9848F252881180003483D /* MainTabVC.swift */; };
 		D3C98493252881740003483D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C98492252881740003483D /* ProfileVC.swift */; };
+		D3C984962528894C0003483D /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C984952528894C0003483D /* NotificationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D3C9848A25287A380003483D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		D3C9848F252881180003483D /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		D3C98492252881740003483D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		D3C984952528894C0003483D /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C98489252867030003483D /* KoreaNow.entitlements */,
+				D3C984942528893D0003483D /* Extension */,
 				D3C9847F25285F670003483D /* Service */,
 				D3C9847E25285F650003483D /* Model */,
 				D3C9847B25285F560003483D /* VC */,
@@ -109,11 +112,11 @@
 		D3C9847B25285F560003483D /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				D3C98491252881670003483D /* ProfileVC */,
 				D3C9848E2528810C0003483D /* MainTabVC */,
+				D3C9847C25285F5A0003483D /* MainVC */,
+				D3C98491252881670003483D /* ProfileVC */,
 				D3C9848D25287B960003483D /* LogVC */,
 				D3C9848125285FAF0003483D /* CommentVC */,
-				D3C9847C25285F5A0003483D /* MainVC */,
 				D3C9847D25285F5F0003483D /* BoardDetailVC */,
 			);
 			path = VC;
@@ -209,6 +212,14 @@
 				D3C98492252881740003483D /* ProfileVC.swift */,
 			);
 			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		D3C984942528893D0003483D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3C984952528894C0003483D /* NotificationExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D745A224D45CA394975BE6C1 /* Frameworks */ = {
@@ -349,6 +360,7 @@
 				D3C9847025285EA00003483D /* BoardCell.swift in Sources */,
 				D3C9845A25285E450003483D /* AppDelegate.swift in Sources */,
 				D3C9847625285ED60003483D /* CommentVC.swift in Sources */,
+				D3C984962528894C0003483D /* NotificationExtension.swift in Sources */,
 				D3C9847425285EC70003483D /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

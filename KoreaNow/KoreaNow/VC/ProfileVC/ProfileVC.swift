@@ -11,6 +11,12 @@ import UIKit
 class ProfileVC: UIViewController {
     
     // MARK: Properties
+    public  var user: User? {
+        didSet {
+            print("----- In ProfileVC USER From NOTI \(String(describing: user)) -----")
+        }
+    }
+    
     private let logoutButton: UIButton = {
        let button = UIButton()
         button.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
@@ -39,7 +45,7 @@ class ProfileVC: UIViewController {
     
     // MARK: - ConfigureNAvi
     private func configureNavi() {
-        title = "프로필"
+        
     }
     
     // MARK: ConfigureViews
