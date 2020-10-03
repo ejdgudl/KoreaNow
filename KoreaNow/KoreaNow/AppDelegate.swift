@@ -6,7 +6,15 @@
 //  Copyright © 2020 김동현. All rights reserved.
 //
 
+
+//App ID Prefix
+//RA99PDU87Z (Team ID)
+
+// Firebase callback URL
+//https://koreanow-3e42c.firebaseapp.com/__/auth/handler
+
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        FirebaseApp.configure()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: MainVC())
+        window?.rootViewController = MainTabVC()
         window?.makeKeyAndVisible()
         return true
     }

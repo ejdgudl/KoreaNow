@@ -18,6 +18,12 @@
 		D3C9847625285ED60003483D /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847525285ED60003483D /* CommentVC.swift */; };
 		D3C9847825285EE80003483D /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847725285EE80003483D /* NewsData.swift */; };
 		D3C9847A25285EF60003483D /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9847925285EF60003483D /* NewsService.swift */; };
+		D3C98484252862C00003483D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C98483252862C00003483D /* GoogleService-Info.plist */; };
+		D3C98486252865640003483D /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C98485252865640003483D /* LogVC.swift */; };
+		D3C98488252866580003483D /* LogVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C98487252866580003483D /* LogVCExtension.swift */; };
+		D3C9848B25287A380003483D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9848A25287A380003483D /* FirebaseService.swift */; };
+		D3C98490252881180003483D /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9848F252881180003483D /* MainTabVC.swift */; };
+		D3C98493252881740003483D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C98492252881740003483D /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,13 @@
 		D3C9847525285ED60003483D /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		D3C9847725285EE80003483D /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		D3C9847925285EF60003483D /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		D3C98483252862C00003483D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3C98485252865640003483D /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
+		D3C98487252866580003483D /* LogVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVCExtension.swift; sourceTree = "<group>"; };
+		D3C98489252867030003483D /* KoreaNow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KoreaNow.entitlements; sourceTree = "<group>"; };
+		D3C9848A25287A380003483D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		D3C9848F252881180003483D /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
+		D3C98492252881740003483D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +93,12 @@
 		D3C9845825285E450003483D /* KoreaNow */ = {
 			isa = PBXGroup;
 			children = (
+				D3C98489252867030003483D /* KoreaNow.entitlements */,
 				D3C9847F25285F670003483D /* Service */,
 				D3C9847E25285F650003483D /* Model */,
 				D3C9847B25285F560003483D /* VC */,
 				D3C9845925285E450003483D /* AppDelegate.swift */,
+				D3C98483252862C00003483D /* GoogleService-Info.plist */,
 				D3C9846225285E460003483D /* Assets.xcassets */,
 				D3C9846425285E460003483D /* LaunchScreen.storyboard */,
 				D3C9846725285E460003483D /* Info.plist */,
@@ -94,6 +109,9 @@
 		D3C9847B25285F560003483D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				D3C98491252881670003483D /* ProfileVC */,
+				D3C9848E2528810C0003483D /* MainTabVC */,
+				D3C9848D25287B960003483D /* LogVC */,
 				D3C9848125285FAF0003483D /* CommentVC */,
 				D3C9847C25285F5A0003483D /* MainVC */,
 				D3C9847D25285F5F0003483D /* BoardDetailVC */,
@@ -130,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C9847925285EF60003483D /* NewsService.swift */,
+				D3C9848A25287A380003483D /* FirebaseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -157,6 +176,39 @@
 				D3C9847325285EC70003483D /* CommentCell.swift */,
 			);
 			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		D3C9848C25287B850003483D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3C98487252866580003483D /* LogVCExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D3C9848D25287B960003483D /* LogVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C98485252865640003483D /* LogVC.swift */,
+				D3C9848C25287B850003483D /* Extension */,
+			);
+			path = LogVC;
+			sourceTree = "<group>";
+		};
+		D3C9848E2528810C0003483D /* MainTabVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C9848F252881180003483D /* MainTabVC.swift */,
+			);
+			path = MainTabVC;
+			sourceTree = "<group>";
+		};
+		D3C98491252881670003483D /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				D3C98492252881740003483D /* ProfileVC.swift */,
+			);
+			path = ProfileVC;
 			sourceTree = "<group>";
 		};
 		D745A224D45CA394975BE6C1 /* Frameworks */ = {
@@ -195,6 +247,9 @@
 		D3C9844E25285E450003483D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "김동현";
@@ -229,6 +284,7 @@
 			files = (
 				D3C9846625285E460003483D /* LaunchScreen.storyboard in Resources */,
 				D3C9846325285E460003483D /* Assets.xcassets in Resources */,
+				D3C98484252862C00003483D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C9847825285EE80003483D /* NewsData.swift in Sources */,
+				D3C98486252865640003483D /* LogVC.swift in Sources */,
+				D3C9848B25287A380003483D /* FirebaseService.swift in Sources */,
 				D3C9847225285EBC0003483D /* BoardDetailVC.swift in Sources */,
+				D3C98488252866580003483D /* LogVCExtension.swift in Sources */,
 				D3C9847A25285EF60003483D /* NewsService.swift in Sources */,
 				D3C9846E25285E8A0003483D /* MainVC.swift in Sources */,
+				D3C98490252881180003483D /* MainTabVC.swift in Sources */,
+				D3C98493252881740003483D /* ProfileVC.swift in Sources */,
 				D3C9847025285EA00003483D /* BoardCell.swift in Sources */,
 				D3C9845A25285E450003483D /* AppDelegate.swift in Sources */,
 				D3C9847625285ED60003483D /* CommentVC.swift in Sources */,
@@ -425,6 +486,7 @@
 			baseConfigurationReference = 93943E9CF300138289592C06 /* Pods-KoreaNow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KoreaNow/KoreaNow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA99PDU87Z;
 				INFOPLIST_FILE = KoreaNow/Info.plist;
@@ -444,6 +506,7 @@
 			baseConfigurationReference = 9C5A7234EC80FA17F373BFC2 /* Pods-KoreaNow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KoreaNow/KoreaNow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA99PDU87Z;
 				INFOPLIST_FILE = KoreaNow/Info.plist;
