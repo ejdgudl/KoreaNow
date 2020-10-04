@@ -16,6 +16,8 @@ class MainVC: UIViewController {
     public var user: User? {
         didSet {
             print("----- In MainVC USER From NOTI \(String(describing: user)) -----")
+            self.view.hideToastActivity()
+            self.view.makeToast("Success Networking", duration: 1)
         }
     }
     

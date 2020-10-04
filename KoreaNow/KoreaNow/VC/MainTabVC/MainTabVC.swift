@@ -18,6 +18,7 @@ class MainTabVC: UITabBarController, UITabBarControllerDelegate {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.main.view.makeToastActivity(.center)
         NotificationCenter.default.addObserver(self, selector: #selector(loginNotiFunc), name: .loginName, object: nil)
         
         self.delegate = self
@@ -66,14 +67,11 @@ class MainTabVC: UITabBarController, UITabBarControllerDelegate {
     
     
     func fetchUser() {
-        self.view.makeToastActivity(.center)
         FirebaseService.share.getUserData { [weak self] (user) -> (Void) in
             guard let self = self else { return }
             
             self.main.user = user
             self.profile.user = user
-            self.view.hideToastActivity()
-            self.view.makeToast("Success Networking", duration: 1)
             
         }
     }
