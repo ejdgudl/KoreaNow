@@ -41,7 +41,6 @@ class MainVC: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseService.share.checkUserIsLoggedIn(vc: self)
         fetchNewsData()
         configure()
         configureNavi()
@@ -51,6 +50,11 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchNewsData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        FirebaseService.share.checkUserIsLoggedIn(vc: self)
     }
     
     // MARK: - @objc
