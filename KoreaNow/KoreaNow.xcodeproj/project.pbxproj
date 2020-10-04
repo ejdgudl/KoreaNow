@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DB2DDDABC596A8AD4905E53 /* Pods_KoreaNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF1144F0D14ADD85E56728 /* Pods_KoreaNow.framework */; };
+		D3085C5E2529FC050042028A /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3085C5D2529FC050042028A /* AlertExtension.swift */; };
 		D3C9845A25285E450003483D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C9845925285E450003483D /* AppDelegate.swift */; };
 		D3C9846325285E460003483D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C9846225285E460003483D /* Assets.xcassets */; };
 		D3C9846625285E460003483D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C9846425285E460003483D /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 		0FFF1144F0D14ADD85E56728 /* Pods_KoreaNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreaNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93943E9CF300138289592C06 /* Pods-KoreaNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaNow.debug.xcconfig"; path = "Target Support Files/Pods-KoreaNow/Pods-KoreaNow.debug.xcconfig"; sourceTree = "<group>"; };
 		9C5A7234EC80FA17F373BFC2 /* Pods-KoreaNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreaNow.release.xcconfig"; path = "Target Support Files/Pods-KoreaNow/Pods-KoreaNow.release.xcconfig"; sourceTree = "<group>"; };
+		D3085C5D2529FC050042028A /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		D3C9845625285E450003483D /* KoreaNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreaNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C9845925285E450003483D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C9846225285E460003483D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C984952528894C0003483D /* NotificationExtension.swift */,
+				D3085C5D2529FC050042028A /* AlertExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				D3C98490252881180003483D /* MainTabVC.swift in Sources */,
 				D3C98493252881740003483D /* ProfileVC.swift in Sources */,
 				D3C9847025285EA00003483D /* BoardCell.swift in Sources */,
+				D3085C5E2529FC050042028A /* AlertExtension.swift in Sources */,
 				D3C9845A25285E450003483D /* AppDelegate.swift in Sources */,
 				D3C9847625285ED60003483D /* CommentVC.swift in Sources */,
 				D3C984962528894C0003483D /* NotificationExtension.swift in Sources */,

@@ -15,6 +15,13 @@ import AuthenticationServices
 class LogVC: UIViewController {
     
     // MARK: - Properties
+    private let imageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.image = UIImage(named: "BGimage")
+        imageView.contentMode = .scaleToFill
+        return imageView
+    }()
+    
     private let titleLabel : UILabel = {
        let label = UILabel()
         label.text = "Korea Now"
@@ -26,7 +33,7 @@ class LogVC: UIViewController {
     fileprivate var currentNonce: String? // when signIn with apple
     
     private let appleLoginButton: ASAuthorizationAppleIDButton = {
-        let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .black)
+        let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
         button.addTarget(self, action: #selector(loginButtonHandler), for: .touchUpInside)
         return button
     }()
@@ -65,19 +72,24 @@ class LogVC: UIViewController {
     private func configureViews() {
         view.backgroundColor = .white
         
-        [titleLabel, appleLoginButton].forEach {
+        [imageView, titleLabel, appleLoginButton].forEach {
             view.addSubview($0)
+        }
+        
+        imageView.snp.makeConstraints { (make) in
+            make.left.top.equalToSuperview()
+            
         }
         
         titleLabel.snp.makeConstraints { (make) in
             make.centerX.width.equalToSuperview()
             make.height.equalTo(250)
-            make.top.equalToSuperview().inset(100)
+            make.top.equalToSuperview().inset(50)
         }
         
         appleLoginButton.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(100)
             make.centerX.equalToSuperview()
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(80)
             make.left.right.equalToSuperview().inset(80)
             make.height.equalTo(40)
         }

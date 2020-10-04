@@ -92,7 +92,7 @@ class MainVC: UIViewController {
     
     // MARK: - ConfigureNavi
     private func configureNavi() {
-        
+        title = "뉴스 리스트"
     }
     
     // MARK: ConfigureViews
