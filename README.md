@@ -1,5 +1,8 @@
 # KoreaNow
 
+# Intro 
+- 문화체육관광부 해외문화홍보원의 외신이 바라본 한국 카테고리 뉴스 Data(Json Data Type의 공공 Data)를 이용한 App
+
 
 #### 사용라이브러리
 - SnapKit
